@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { ArrowRight, Check, ChevronRight, Quote, ShieldCheck, TrendingUp } from "lucide-react";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -163,6 +163,6 @@ export function UproasPage() {
 }
 
 function Stat({value,label}:{value:string;label:string}) { return <div className="bg-background p-7 text-center sm:p-9"><p className="font-display text-5xl font-black text-primary">{value}</p><p className="mt-2 text-sm text-muted-foreground">{label}</p></div> }
-function Method({number,title,children}:{number:string;title:string;children:React.ReactNode}) { return <article className="grid gap-6 border-t border-primary-foreground/20 py-10 md:grid-cols-[100px_1fr]"><p className="font-display text-4xl font-black text-brand-soft">{number}</p><div><h3 className="font-display text-3xl font-bold">{title}</h3><div className="mt-5 space-y-5 text-lg leading-relaxed text-primary-foreground/70">{children}</div></div></article> }
-function MathCard({number,children}:{number:string;children:React.ReactNode}) { return <div className="bg-background p-7 sm:p-9"><span className="font-display text-sm font-black text-brand-mark">{number}</span><p className="mt-5 leading-relaxed text-muted-foreground">{children}</p></div> }
+function Method({number,title,children}:{number:string;title:string;children:ReactNode}) { return <article className="grid gap-6 border-t border-primary-foreground/20 py-10 md:grid-cols-[100px_1fr]"><p className="font-display text-4xl font-black text-brand-soft">{number}</p><div><h3 className="font-display text-3xl font-bold">{title}</h3><div className="mt-5 space-y-5 text-lg leading-relaxed text-primary-foreground/70">{children}</div></div></article> }
+function MathCard({number,children}:{number:string;children:ReactNode}) { return <div className="bg-background p-7 sm:p-9"><span className="font-display text-sm font-black text-brand-mark">{number}</span><p className="mt-5 leading-relaxed text-muted-foreground">{children}</p></div> }
 function FooterGroup({title,items}:{title:string;items:string[]}) { return <div><p className="text-xs font-black uppercase tracking-widest text-brand-soft">{title}</p><ul className="mt-5 space-y-3 text-sm text-primary-foreground/60">{items.map(item=><li key={item}>{item}</li>)}</ul></div> }
