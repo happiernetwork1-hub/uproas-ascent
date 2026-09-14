@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import uproasLogo from "@/assets/uproas-logo.png";
 
 const clients = [
   "THE MASSAGE CHAIR COMPANY", "LET'S GET CARE", "GLENVILL HOMES", "NIMBLE", "TRANSFORMATION",
@@ -99,7 +100,15 @@ const faqs = [
 ];
 
 function Wordmark({ light = false }: { light?: boolean }) {
-  return <span className={`wordmark ${light ? "text-primary-foreground" : "text-primary"}`}>UPROAS<span className="text-brand-mark">.</span></span>;
+  return (
+    <img
+      src={uproasLogo}
+      alt="UPROAS"
+      width={1152}
+      height={576}
+      className={`h-8 w-auto sm:h-9 ${light ? "brightness-0 invert" : ""}`}
+    />
+  );
 }
 
 function LeadDialog({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) {
