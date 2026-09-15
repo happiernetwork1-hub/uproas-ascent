@@ -5,7 +5,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import uproasLogo from "@/assets/uproas-logo.png";
+import { archiveAssets as media } from "@/lib/archive-assets";
+
+const campaignTiles = [
+  [media.imgi_109_tile_lgc_png_webp, "LET’S GET CARE"],
+  [media.imgi_111_tile_glenvill_png_webp, "GLENVILL HOMES"],
+  [media.imgi_113_tile_nimble_png, "NIMBLE"],
+  [media.imgi_114_tile_scotland_png, "SCOTLAND TITLES"],
+  [media.imgi_115_tile_muscle_png, "MY MUSCLE CHEF"],
+  [media.imgi_116_tile_rentbuy_png, "RENT BUY IT"],
+  [media.imgi_118_tile_aussie_png, "AUSSIE ENVIRONMENTAL"],
+  [media.imgi_119_tile_electrolux_png_webp, "ELECTROLUX PROFESSIONAL"],
+  [media.imgi_122_tile_aiv_png_webp, "AIV AUSTRALIAN KOALA — CAMPAIGN 1"],
+  [media.imgi_123_tile_aiv_png, "AIV AUSTRALIAN KOALA — CAMPAIGN 2"],
+  [media.imgi_125_tile_aquatic_png_webp, "AQUATIC PERFORMANCE"],
+  [media.imgi_128_tile_green_png_webp, "GREEN GOO"],
+  [media.imgi_130_tile_koikas_png_webp, "KOIKAS ACOUSTICS"],
+  [media.imgi_132_tile_ppr_png, "PURE PUBLIC RELATIONS"],
+  [media.imgi_133_tile_marshallwhite_png_webp, "MARSHALL WHITE"],
+  [media.imgi_135_tile_hurdleys_png_webp, "HURDLEYS OFFICE FURNITURE — CAMPAIGN 1"],
+  [media.imgi_136_tile_hurdleys_png, "HURDLEYS OFFICE FURNITURE — CAMPAIGN 2"],
+  [media.imgi_138_tile_clearance_png, "CLEARANCE SOLUTIONS AUSTRALIA"],
+] as const;
 
 const clients = [
   "THE MASSAGE CHAIR COMPANY", "LET'S GET CARE", "GLENVILL HOMES", "NIMBLE", "TRANSFORMATION",
@@ -102,7 +123,7 @@ const faqs = [
 function Wordmark({ light = false }: { light?: boolean }) {
   return (
     <img
-      src={uproasLogo}
+      src={media.Uproas_Logo_png}
       alt="UPROAS"
       width={1152}
       height={576}
@@ -144,7 +165,7 @@ export function UproasPage() {
     <header className="sticky top-0 z-40 border-b border-primary-foreground/10 bg-primary/95 text-primary-foreground backdrop-blur-md"><div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8"><a href="#top" aria-label="UPROAS home"><Wordmark light/></a><nav className="hidden items-center gap-8 text-sm font-semibold md:flex"><a href="#method" className="transition-colors hover:text-brand-soft">Method</a><a href="#proof" className="transition-colors hover:text-brand-soft">Results</a><a href="#faq" className="transition-colors hover:text-brand-soft">FAQ</a></nav><Button onClick={claim} className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">Claim Free Session <ChevronRight/></Button></div></header>
 
     <main id="top">
-      <section className="relative isolate bg-primary text-primary-foreground"><div className="hero-grid absolute inset-0 -z-10 opacity-20"/><div className="mx-auto grid min-h-[760px] max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-[1fr_0.8fr] lg:px-8"><div><p className="mb-10 inline-flex border border-primary-foreground/25 px-4 py-2 text-xs font-bold uppercase tracking-widest">Updated: 12th of September, 2026</p><p className="mb-5 font-serif text-xl italic text-primary-foreground/75">Dear Business Builder,</p><h1 className="max-w-4xl font-display text-5xl font-extrabold uppercase leading-[1.02] sm:text-6xl lg:text-7xl">If you would like to know <span className="text-brand-soft">THE very best way</span> to use Facebook ads to suck in sales like a vacuum cleaner on steroids…at MASSIVE scale.</h1><p className="mt-8 max-w-2xl text-xl leading-relaxed text-primary-foreground/75">Then this will be one of the most exciting messages you’ll ever read.</p><p className="mt-4 text-xl font-bold">Here’s why:</p><Button onClick={claim} size="lg" className="mt-10 h-14 bg-primary-foreground px-7 text-base text-primary hover:bg-primary-foreground/90">Claim Free Session <ArrowRight/></Button></div><div className="hidden lg:block"><div className="proof-panel border border-primary-foreground/15 bg-primary-foreground/5 p-8"><p className="text-xs font-bold uppercase tracking-widest text-brand-soft">PAID SOCIAL. BUILT TO SCALE.</p><div className="my-12 border-y border-primary-foreground/15 py-10"><p className="font-display text-7xl font-black">$15M+</p><p className="mt-2 text-primary-foreground/60">in Facebook Ads</p></div><div className="grid grid-cols-2 gap-8"><div><p className="font-display text-4xl font-black">1184</p><p className="mt-1 text-sm text-primary-foreground/60">industries & niches</p></div><div><p className="font-display text-4xl font-black">$10.2B</p><p className="mt-1 text-sm text-primary-foreground/60">in client sales</p></div></div></div></div></div></section>
+      <section className="relative isolate bg-primary text-primary-foreground"><div className="hero-grid absolute inset-0 -z-10 opacity-20"/><div className="mx-auto grid min-h-[760px] max-w-7xl items-center gap-14 px-5 py-20 lg:grid-cols-[1fr_0.8fr] lg:px-8"><div><p className="mb-10 inline-flex border border-primary-foreground/25 px-4 py-2 text-xs font-bold uppercase tracking-widest">Updated: 13th of September, 2026</p><p className="mb-5 font-serif text-xl italic text-primary-foreground/75">Dear Business Builder,</p><h1 className="max-w-4xl font-display text-5xl font-extrabold uppercase leading-[1.02] sm:text-6xl lg:text-7xl">If you would like to know <span className="text-brand-soft">THE very best way</span> to use Facebook ads to suck in sales like a vacuum cleaner on steroids…at MASSIVE scale.</h1><p className="mt-8 max-w-2xl text-xl leading-relaxed text-primary-foreground/75">Then this will be one of the most exciting messages you’ll ever read.</p><p className="mt-4 text-xl font-bold">Here’s why:</p><Button onClick={claim} size="lg" className="mt-10 h-14 bg-primary-foreground px-7 text-base text-primary hover:bg-primary-foreground/90">Claim Free Session <ArrowRight/></Button></div><div className="hidden lg:block"><div className="proof-panel border border-primary-foreground/15 bg-primary-foreground/5 p-8"><p className="text-xs font-bold uppercase tracking-widest text-brand-soft">PAID SOCIAL. BUILT TO SCALE.</p><div className="my-12 border-y border-primary-foreground/15 py-10"><p className="font-display text-7xl font-black">$15M+</p><p className="mt-2 text-primary-foreground/60">in Facebook Ads</p></div><div className="grid grid-cols-2 gap-8"><div><p className="font-display text-4xl font-black">1184</p><p className="mt-1 text-sm text-primary-foreground/60">industries & niches</p></div><div><p className="font-display text-4xl font-black">$10.2B</p><p className="mt-1 text-sm text-primary-foreground/60">in client sales</p></div></div></div></div></div></section>
 
       <section id="proof" className="bg-background py-24 sm:py-32"><div className="mx-auto max-w-4xl px-5"><p className="eyebrow">THE TRACK RECORD</p><h2 className="section-title">Over the last 24 months, our team has spent over $15 million dollars on Facebook Ads…</h2><p className="mt-8 font-display text-3xl font-bold text-primary">Here’s the proof:</p><div className="my-12 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-3"><Stat value="$15M" label="All with ads."/><Stat value="1184" label="different industries and niches."/><Stat value="$10.2B" label="in sales."/></div><div className="sales-copy"><p>And we’ve done this in over 1184 different industries and niches.</p><p>Using that $15 million to help generate our clients $10.2 billion in sales.</p><p className="font-bold text-primary">All with ads.</p><p>And look, when you spend that kinda dough on ads – in so many different industries – you learn a lot. About exactly what works, and what doesn’t. Not theoretically what works. From some YouTube tutorials and courses. Or from some guru with a bunch of “theories” pretending to be an “expert”. No. I’m talkin’ about NO-BS, battle-tested strategies from the frontlines of turning advertising into profit. From a team who knows what it means to have to make ad campaigns profitable – because they’ve got a payroll to meet.</p></div></div></section>
 
